@@ -1,22 +1,18 @@
-#define ANALOG_IN 0
-
-
-int val;
-float temp;
+constexpr uint8_t temperaturePinNumber = 0;
 
 
 void setup() {
-  pinMode(ANALOG_IN, OUTPUT);
+  Serial.begin(115200);
 }
 
 
 void loop() {
-  val = analogRead(ANALOG_IN);
-  temp = (float)500 / 1013 * val - 50;
+  float voltage_V = (float)analogRead(temperaturePinNumber) / 1024.0 * 5.0;
+  float temperature_degC = 100.0 * voltage_V - 50;
 
   Serial.print(millis());
   Serial.print(",");
-  Serial.println(temp);
+  Serial.println(temperature_degC);
 
   delay(10);
 }
