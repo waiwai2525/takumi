@@ -1,4 +1,4 @@
-constexpr uint8_t temperaturePinNumber = 0;
+constexpr uint8_t temperaturePinNumber = A0;
 
 
 void setup() {
