@@ -8,7 +8,7 @@ void setup() {
 
 void loop() {
   float voltage_V = (float)analogRead(temperaturePinNumber) / 1024.0 * 5.0;
-  float temperature_degC = 100.0 * voltage_V - 50;
+  float temperature_degC = 100.0 * (voltage_V - 0.5);
 
   Serial.print(millis());
   Serial.print(",");
