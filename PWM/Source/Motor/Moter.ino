@@ -1,4 +1,4 @@
-constexpr uint8_t inputPinNumber = 1;
+constexpr uint8_t inputPinNumber = A0;
 constexpr uint8_t outputPinNumber = 9;
 
 
